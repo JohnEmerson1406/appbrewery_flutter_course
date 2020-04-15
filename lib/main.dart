@@ -14,7 +14,8 @@ void main() {
         backgroundColor: Colors.blueGrey,
         body: Center(
           child: Image(
-            image: NetworkImage('https://www.w3schools.com/w3css/img_lights.jpg'),
+            // alter yaml file to assets
+            image: AssetImage('images/diamond.png'),
           ),
         ),
       ),
