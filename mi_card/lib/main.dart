@@ -13,13 +13,22 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           // safeArea traz o conteudo para uma parte onde ele apareça por completo
-          child: Container(
-            height: 100.0,
-            width: 100.0,
-            margin: EdgeInsets.only(left: 30),
-            padding: EdgeInsets.all(20),
-            color: Colors.white,
-            child: Text('hello'),
+          child: Column(
+            children: <Widget>[
+              CircleAvatar(
+                radius: 50,
+                // backgroundColor: Colors.red,
+                backgroundImage: AssetImage('images/john.jpg'),
+              ),
+              Text(
+                'John Emerson',
+                style: TextStyle(
+                  fontSize: 40,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
           ),
         ),
       ),
