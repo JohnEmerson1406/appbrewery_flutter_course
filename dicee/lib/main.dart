@@ -19,17 +19,29 @@ void main() {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Expanded(
-          child: Image.asset('images/dice1.png'), // first form
-        ),
-        Expanded(
-          child: Image(
-            image: AssetImage('images/dice1.png'), // second form
+    return Center(
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                print('left button got pressed.');
+              },
+              child: Image.asset('images/dice1.png'), // first form
+            ),
           ),
-        ),
-      ],
+          Expanded(
+            child: FlatButton(
+              onPressed: () {
+                print('right button got pressed.');
+              },
+              child: Image(
+                image: AssetImage('images/dice1.png'), // second form
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
