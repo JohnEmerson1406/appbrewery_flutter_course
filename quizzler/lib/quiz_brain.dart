@@ -1,7 +1,6 @@
 import 'questions.dart';
 
 class QuizBrain {
-
   int _questionNumber = 0;
 
   List<Question> _questionBank = [
@@ -44,5 +43,13 @@ class QuizBrain {
 
   bool getQuestionAnswer() {
     return _questionBank[_questionNumber].questionAnswer;
+  }
+
+  bool isFinished() {
+    return _questionNumber >= _questionBank.length - 1;
+  }
+
+  void resetQuiz() {
+    _questionNumber = 0;
   }
 }
